@@ -26,11 +26,11 @@ qm list | grep running | while read line; do
              }"
 
     echo "Updating VM: $ID $NAME"
-    qm guest exec $ID -- bash -c "apt update && apt-get update && apt install git -y"
-    qm guest exec $ID -- bash -c "cd /root && git clone https://github.com/TheRealMarcusChiu/proxmox-scripts.git"
-    qm guest exec $ID -- bash -c "cd /root/proxmox-scripts && git pull"
-    qm guest exec $ID -- bash -c "export INFLUXDB_URL=\"$INFLUXDB_URL\" && export INFLUXDB_API_TOKEN=\"$INFLUXDB_API_TOKEN\" && export INFLUXDB_ORG_NAME=\"$INFLUXDB_ORG_NAME\" && export INFLUXDB_BUCKET_NAME=\"$INFLUXDB_BUCKET_NAME\" && cd /root/proxmox-scripts/telegraf && /root/proxmox-scripts/telegraf/setup.sh > /root/proxmox-scripts/telegraf/log.txt"
-    qm guest exec $ID -- bash -c "systemctl show -p SubState,ActiveState,Result telegraf > /root/proxmox-scripts/telegraf/output.txt"
+    qm guest exec $ID --timeout 0 -- bash -c "apt update && apt-get update && apt install git -y"
+    qm guest exec $ID --timeout 0 -- bash -c "cd /root && git clone https://github.com/TheRealMarcusChiu/proxmox-scripts.git"
+    qm guest exec $ID --timeout 0 -- bash -c "cd /root/proxmox-scripts && git pull"
+    qm guest exec $ID --timeout 0 -- bash -c "export INFLUXDB_URL=\"$INFLUXDB_URL\" && export INFLUXDB_API_TOKEN=\"$INFLUXDB_API_TOKEN\" && export INFLUXDB_ORG_NAME=\"$INFLUXDB_ORG_NAME\" && export INFLUXDB_BUCKET_NAME=\"$INFLUXDB_BUCKET_NAME\" && cd /root/proxmox-scripts/telegraf && /root/proxmox-scripts/telegraf/setup.sh > /root/proxmox-scripts/telegraf/log.txt"
+    qm guest exec $ID --timeout 0 -- bash -c "systemctl show -p SubState,ActiveState,Result telegraf > /root/proxmox-scripts/telegraf/output.txt"
     echo "Finished updating VM: $ID $NAME"
 
 done
