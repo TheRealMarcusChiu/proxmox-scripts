@@ -24,7 +24,7 @@ cat <<EOF > telegraf.conf
 
 [[outputs.influxdb_v2]]
   urls = ["$INFLUXDB_URL"]
-  organization = "$INFLUXDB_ORG_ID"
+  organization = "$INFLUXDB_ORG_NAME"
   bucket = "$INFLUXDB_BUCKET_NAME"
   token = "$INFLUXDB_API_TOKEN"
 EOF
