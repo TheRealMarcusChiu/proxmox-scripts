@@ -33,5 +33,6 @@ tar -xvzf telegraf.tar.gz
 cp telegraf.service /lib/systemd/system/telegraf.service
 
 sudo systemctl daemon-reload
+sudo systemctl stop telegraf
 sudo systemctl start telegraf
 sudo systemctl enable telegraf
