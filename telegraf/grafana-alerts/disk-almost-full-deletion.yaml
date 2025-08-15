@@ -21,11 +21,15 @@ deleteRules:
   - orgId: 1
     uid: 96b385f8268743
   - orgId: 1
+    uid: 0ec88a3b6bbbe1
+  - orgId: 1
     uid: 66cd4143393b25
   - orgId: 1
     uid: 8a76e13d141f32
   - orgId: 1
     uid: 41fca478485930
+  - orgId: 1
+    uid: 89e6d2a3b7a874
   - orgId: 1
     uid: 17de8eb561b9a4
   - orgId: 1
@@ -48,6 +52,8 @@ deleteRules:
     uid: 15a4ee2a1214e3
   - orgId: 1
     uid: c8f7163365a155
+  - orgId: 1
+    uid: b251ef5e4c2562
   - orgId: 1
     uid: c63a4396abfe06
   - orgId: 1
