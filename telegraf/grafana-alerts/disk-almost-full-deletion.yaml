@@ -1,0 +1,72 @@
+apiVersion: 1
+deleteRules:
+  - orgId: 1
+    uid: 93ce8ea1be31a5
+  - orgId: 1
+    uid: 06b75e795b7ce2
+  - orgId: 1
+    uid: 4a6429b7fbfcb4
+  - orgId: 1
+    uid: a9e1f4504cd632
+  - orgId: 1
+    uid: c63d8397c9f0ed
+  - orgId: 1
+    uid: 18ff7987f511d0
+  - orgId: 1
+    uid: 175276d92d6eca
+  - orgId: 1
+    uid: 6ef73a696aa494
+  - orgId: 1
+    uid: a6d9df8e4c1dea
+  - orgId: 1
+    uid: 96b385f8268743
+  - orgId: 1
+    uid: 66cd4143393b25
+  - orgId: 1
+    uid: 8a76e13d141f32
+  - orgId: 1
+    uid: 41fca478485930
+  - orgId: 1
+    uid: 17de8eb561b9a4
+  - orgId: 1
+    uid: a1d9d89f2a69e2
+  - orgId: 1
+    uid: 1bdee45bfeda79
+  - orgId: 1
+    uid: 5ec9c592afa406
+  - orgId: 1
+    uid: 755ec08a0e8da0
+  - orgId: 1
+    uid: 4a46f46580db9a
+  - orgId: 1
+    uid: b341f4c13d4b8e
+  - orgId: 1
+    uid: bf1fe0867d90a0
+  - orgId: 1
+    uid: e4ab3eacbe161e
+  - orgId: 1
+    uid: 15a4ee2a1214e3
+  - orgId: 1
+    uid: c8f7163365a155
+  - orgId: 1
+    uid: c63a4396abfe06
+  - orgId: 1
+    uid: fcce8ed50c3819
+  - orgId: 1
+    uid: b7453b3f0eb5ed
+  - orgId: 1
+    uid: ff3d49a31d9bff
+  - orgId: 1
+    uid: 01e60b748cdb73
+  - orgId: 1
+    uid: f2253a6d220daf
+  - orgId: 1
+    uid: 8040d06cce9654
+  - orgId: 1
+    uid: ff4a4345eeee84
+  - orgId: 1
+    uid: 03277a889cb12e
+  - orgId: 1
+    uid: 3b06aae1d83e65
+  - orgId: 1
+    uid: 01c94c8d1693a6

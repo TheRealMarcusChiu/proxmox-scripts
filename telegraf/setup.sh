@@ -1,11 +1,5 @@
 #! /bin/bash
 
-#export INFLUXDB_URL="CHANGE_ME"
-#export INFLUXDB_API_TOKEN="CHANGE_ME"
-#export INFLUXDB_ORG_ID="CHANGE_ME"
-#export INFLUXDB_ORG_NAME="CHANGE_ME"
-#export INFLUXDB_BUCKET_NAME="CHANGE_ME"
-
 cd /root/proxmox-scripts/telegraf
 
 cat <<EOF > telegraf.conf
