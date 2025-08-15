@@ -1,13 +1,11 @@
 #! /bin/bash
 
-mkdir /root/telegraf
-cd /root/telegraf
+#export API_TOKEN="CHANGE_ME"
+#export NAME="CHANGE_ME"
 
-wget https://github.com/TheRealMarcusChiu/proxmox-scripts/raw/refs/heads/master/telegraf/telegraf.tar.gz
+cd /root/proxmox-scripts/telegraf
 
-tar -xvzf telegraf.tar.gz
-
-cat << EOF > /root/telegraf/telegraf.conf
+cat <<EOF > telegraf.conf
 [global_tags]
 [agent]
   interval = "10s"
@@ -23,33 +21,13 @@ cat << EOF > /root/telegraf/telegraf.conf
 
 [[outputs.influxdb_v2]]
   urls = ["http://influxdb.lan"]
-  token = "$API_TOKEN"
   organization = "marcus-company"
-  bucket = "telegraf-lxc-test"
+  bucket = "telegraf-lxc-$NAME"
+  token = "$API_TOKEN"
 EOF
 
-cat << EOF > /lib/systemd/system/telegraf.service
-[Unit]
-Description=Telegraf
-Documentation=https://github.com/influxdata/telegraf
-After=network-online.target
-Wants=network-online.target
-
-[Service]
-Type=notify
-NotifyAccess=all
-User=root
-ExecStart=/root/telegraf/telegraf -config /root/telegraf/telegraf.conf
-ExecReload=/bin/kill -HUP $MAINPID
-Restart=on-failure
-RestartForceExitStatus=SIGPIPE
-KillMode=mixed
-LimitMEMLOCK=8M:8M
-PrivateMounts=true
-
-[Install]
-WantedBy=multi-user.target
-EOF
+tar -xvzf telegraf.tar.gz
+cp telegraf.service /lib/systemd/system/telegraf.service
 
 sudo systemctl daemon-reload
 sudo systemctl start telegraf
