@@ -1,28 +1,10 @@
 #! /bin/bash
 
-#export INFLUXDB_URL="http://influxdb.lan"
+#export INFLUXDB_URL="CHANGE_ME"
 #export INFLUXDB_API_TOKEN="CHANGE_ME"
-#export INFLUXDB_ORG_ID="a09d6bc7f532489d"
-#export INFLUXDB_ORG_NAME="marcus-company"
-#export INFLUXDB_BUCKET_NAME="telegraf-lxc-god"
-
-sudo apt-get update
-sudo apt install curl -y
-
-# Create telegraf bucket
-curl -X POST http://influxdb.lan/api/v2/buckets \
-  -H "Authorization: Token $INFLUXDB_API_TOKEN" \
-  -H "Content-type: application/json" \
-  -d "{
-        \"name\": \"$INFLUXDB_BUCKET_NAME\",
-        \"orgID\": \"$INFLUXDB_ORG_ID\",
-        \"retentionRules\": [
-          {
-            \"type\": \"expire\",
-            \"everySeconds\": 86400
-          }
-        ]
-      }"
+#export INFLUXDB_ORG_ID="CHANGE_ME"
+#export INFLUXDB_ORG_NAME="CHANGE_ME"
+#export INFLUXDB_BUCKET_NAME="CHANGE_ME"
 
 cd /root/proxmox-scripts/telegraf
 
