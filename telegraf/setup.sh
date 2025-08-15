@@ -3,7 +3,7 @@
 mkdir /root/telegraf
 cd /root/telegraf
 
-#wget
+wget https://github.com/TheRealMarcusChiu/proxmox-scripts/raw/refs/heads/master/telegraf/telegraf.tar.gz
 
 tar -xvzf telegraf.tar.gz
 
